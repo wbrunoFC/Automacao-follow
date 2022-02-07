@@ -1,0 +1,26 @@
+[{
+    "nomeCampos": {
+        "qualEOTipo": {
+            "nome": "Qual é o tipo?",
+            "opcoes": [
+                "KPI",
+                "Padrão",
+                "Alarmes",
+                "Fatura",
+                "Desperdício - Linha de  Referência",
+                "Numérico",
+                "Gráfico",
+                "Projeção de Consumo",
+                "Projeção de Consumo Mercado Livre",
+                "Consumo dos pontos no grupo",
+                "Pontos Adiantados/Atrasados",
+                "Rank da queda de energia",
+                "Energia - Consumo anual",
+                "Parâmetros financeiros",
+                "Projeção de Fatura",
+                "Fatura Total Anual",
+                "Status dos pontos digitais no grupo"
+            ]
+        }
+    }
+}]
