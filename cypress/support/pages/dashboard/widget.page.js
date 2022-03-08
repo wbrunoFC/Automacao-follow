@@ -77,6 +77,11 @@ function WIDGET_nomeCampo_exibirQualValor() {
                 .as('Nome: Exibir qual o valor?')
 }
 
+function WIDGET_nomeCampo_QualOTipoDeGrafico() {
+    return cy.get('.kind-widg-md > :nth-child(1) > .dashChartText')
+                .as('Nome: Qual o tipo de grafico?')
+}
+
 /* CAMPOS WIDGET *****************************************************/
 function WIDGET_select_qualEOTipo(tipoWidget) {
     return cy.get('#lstKindWidget').select(tipoWidget)
@@ -164,6 +169,11 @@ function WIDGET_select_exibirQualValor() {
                 .as('Campo: Exibir qual o valor?')
 }
 
+function WIDGET_select_QualOTipoDeGrafico() {
+    return cy.get('#lstDash_tipos')
+                .as('Campo: Qual o tipo de grafico?')
+}
+
 export { WIDGET_nomeCampo_qualEOTipo,
         WIDGET_nomeCampo_qualPeriodoVisualizacaoGrafica,
         WIDGET_nomeCampo_widgetGrupoOuPonto,
@@ -199,4 +209,6 @@ export { WIDGET_nomeCampo_qualEOTipo,
         WIDGET_radio_personalizado_indicador,
         WIDGET_botoes,
         WIDGET_nomeCampo_exibirQualValor,
-        WIDGET_select_exibirQualValor }
+        WIDGET_select_exibirQualValor,
+        WIDGET_nomeCampo_QualOTipoDeGrafico,
+        WIDGET_select_QualOTipoDeGrafico }

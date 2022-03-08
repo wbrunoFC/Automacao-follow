@@ -27,6 +27,36 @@ describe('Widget interface', () => {
         cy.xpath('//*[@id="lstKindWidget"]/option')
             .should('have.length', 17)
             .as(`Quantidade de opções no campo ${grafico}`)
+
+        DASHBOARD.WIDGET_nomeCampo_widgetGrupoOuPonto()
+            .and('to.be.visible')
+        cy.xpath('//*[@id="groupEdit1"]/table/tbody/tr[2]/td[2]/div/input')
+            .should('to.be.visible')
+            .and('to.be.enabled')
+            // .and('have.length', 2)
+        DASHBOARD.WIDGET_radio_Grupo_widgetGrupoOuPonto()
+            .check()
+
+        DASHBOARD.WIDGET_nomeCampo_qualPontoMedicao()
+            .and('contain.text', 'Qual o Ponto de Medição?')
+        DASHBOARD.WIDGET_search_qualPontoMedicao()
+            .type('davo{enter}', {timeout:50000})
+        cy.get('[data-id="191"] > td', {timeout:50000}).click()
+            
+        DASHBOARD.WIDGET_nomeCampo_QualOTipoDeGrafico()
+            .should('to.be.visible')
+        DASHBOARD.WIDGET_select_QualOTipoDeGrafico()
+            .should('to.be.visible')
+            .and('to.be.enabled')
+            .and('have.length', 1)
+
+        DASHBOARD.WIDGET_nomeCampo_QualOTipoDeGrafico()
+            .should('to.be.visible')
+        DASHBOARD.WIDGET_select_QualOTipoDeGrafico()
+            .should('to.be.visible')
+            .and('to.be.enabled')
+            .and('have.length', 1)
+        
         
     });
 });
